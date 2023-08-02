@@ -1,4 +1,5 @@
 import './App.css'
+import "../src/components/styles.css"
 import Home from './components/Home'
 
 function App() {

@@ -1,20 +1,32 @@
 import {Container, Row, Col}from 'react-bootstrap';
+import "../components/styles.css"
 
 function Home() {
 
     return (
       <>
-        <Container>
-            <Col>
-            <Row md={5}>
+        <Container  className='container'>
+            <Row className='newscontainer'>
+            <Col md={6} className='newsdescription'>
                 <h1>Stay Updated</h1>
-            </Row>
+                <p>Join 60,000+ product managers receiving monthly updates on:</p>
+                <ul>
+                    <li>Product discovery and building waht matters</li>
+                    <li>Measuring to ensure updates are a success</li>
+                    <li>And much more!</li>
+                </ul>
+                    <label>Email adress</label>
+                    <br />
+                    <input placeholder='email@company.com'></input>
+                    <br />
+                    
+                    <button type="submit" className='btnsubmit'>Subcribe to monthly newsletter</button>
             </Col>
-            <Col>
-            <Row md={5}>
-            <h1>Image</h1>
+            <Col md={6} className='newsimage'>    
+                
+                    <img src='/src/assets/images/illustration-sign-up-desktop.svg' alt='illustration'/>
+            </Col>   
             </Row>
-            </Col>
         </Container>
       </>
     )
