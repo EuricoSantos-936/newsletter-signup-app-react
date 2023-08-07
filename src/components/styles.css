@@ -1,3 +1,7 @@
+
+*{
+    font-family: "Roboto", sans-serif;
+}
 :root{
     --primarycolor:hsl(4, 100%, 67%);
     --DarkSlateGrey: hsl(234, 29%, 20%);
@@ -5,18 +9,17 @@
     --Grey: hsl(231, 7%, 60%);
     --White: hsl(0, 0%, 100%);
     background-color: var(--CharcoalGrey);
-   
-   font-family: "Roboto";
-    font-weight: 400,700;
 }
 .container{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
 }
 .newscontainer{
     display: flex;
+  
     width: 800px;
     height: 600px;
     background-color: var(--White);
@@ -24,20 +27,20 @@
     padding: 20px;
 }
 .newsdescription{
-    position: absolute; 
-    right: 50%;
-    margin-left: 20px;  
-    top: 25%;
-    bottom: 25%; 
+    display: flex;
+    
+    flex-direction: column;
+    position:absolute;
     color: var(--DarkSlateGrey);
+    padding-left: 10px;
+    padding-right: 100%;
+    align-items: start;
 }
 .newsimage{
     position: absolute;
     left: 50%;
 }
-ul {
-    list-style-image: url("/src/assets/images/icon-list.svg");
-  }
+
 .btnsubmit{
     margin-left: 10px;
     margin-top: 20px;
@@ -46,12 +49,32 @@ ul {
     font-size: 12px;
     width: 300px;
     height: 50px;
+    border-radius: 10px;
     font-style: bold;
 }
 p{
-    color: var(--Grey);
     font-size: 16px;
 }
 h1{
 text-align: center;
+font-weight: 700;
+font-size: 50px;
+
 }
+.emailadresscheck{
+    display: none;
+}
+.inputemail{
+    margin-top: 10px;
+    width: 350px;
+    height: 50px;
+}
+.emaillabel{
+    font-weight: bold;
+    margin-bottom: 0;
+}
+ul {
+    list-style-image: url("/src/assets/images/icon-list.svg");
+    margin-left: 0;
+    text-align: left;
+  }
