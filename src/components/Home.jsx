@@ -46,15 +46,20 @@ function Home() {
                         <li>And much more!</li>
                   </div>
                   <div className='form'>
-                      <label className='emaillabel'>Email address</label>
-                      <input className="inputemail" 
+                      <div className="emaillabelcontainer">
+                          <div className="emailvalidcontainer">
+                        {!isValidEmail && (
+                          <label className='validemail' id='validemail'>Valid email required</label>
+                        )}
+                          </div>
+                        <label className='emaillabel'>Email address</label>
+                      </div>
+                      <input className={`inputemail ${!isValidEmail ? 'invalid' : ''}`}
                       placeholder='email@company.com'
                       value={email}
                       onChange={handleEmailChange}>
                       </input>
-                      {!isValidEmail && (
-                        <label className='validemail' id='validemail'>Valid email required</label>
-                      )}
+                      
                       <button
                         type='button'
                         className='btnsubmit'
@@ -76,11 +81,14 @@ function Home() {
               nested
             >
               <div className="successcontainer">
+                <div className="successmsg">
+                <img src="/src/assets/images/icon-success.svg" alt="success"/>
                 <div>
-                  <h1></h1>
-                  <p>A confirmation emai has heen sent to {email} Please open it and click the button inside to confirm your subscription.</p>
+                  <h1>Thanks for subscribing!</h1>
+                  <p>A confirmation emai has heen sent to <span>{email}</span>. Please open it and click the button inside to confirm your subscription.</p>
                 </div>
-                <button onClick={handleClosePopup}>Dismiss message</button>
+                <button onClick={handleClosePopup} className="btndismiss">Dismiss message</button>
+                </div>
               </div>
             </Popup>
         </main>
