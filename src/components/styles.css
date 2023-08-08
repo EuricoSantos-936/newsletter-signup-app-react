@@ -49,6 +49,9 @@ li{
     background: url('../assets/images/icon-list.svg') left center no-repeat;
     padding: 10px 25px 5px 25px;
 }
+.image{
+    content: url( "/src/assets/images/illustration-sign-up-desktop.svg");
+}
 .form{
     display: flex;
     justify-items: center;
@@ -137,4 +140,61 @@ li{
 .blur-background{
     filter: blur(4px); 
     pointer-events: none; 
+}
+
+@media (max-width: 375px) {
+    .container {
+        background-color: var(--White);
+        font-weight: 400;
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        display: flex;
+        top: 0;
+        left: 0;
+        transform: none;
+        background-color: var(--White);
+        padding: 0;
+        border-radius: 0;
+    }
+   
+    .initialcontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .initialinformation {
+      margin-left: 0;
+        height: 100%;
+        width: 350px;
+
+    }
+    .image{
+        content: url("/src/assets/images/illustration-sign-up-mobile.svg");
+    }
+    .btnsubmit{
+        height:50px;
+        width: 350px;
+        align-self: center;
+        border-radius: 10px;
+        background: var(--DarkSlateGrey);
+        color: var(--White);
+        margin-top: 20px;
+        border: 0;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .initialimage{
+        order: -1;
+    }
+    .form{
+        margin-right: 0;
+        
+    }
+    .emailvalidcontainer{
+        position: absolute;
+        margin-left: 200px;
+    }
 }

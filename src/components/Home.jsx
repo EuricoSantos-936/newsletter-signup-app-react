@@ -69,9 +69,9 @@ function Home() {
                       </button>
                           </div>
               </div>
-              <div className='intialimage'>    
-                      <img src='/src/assets/images/illustration-sign-up-desktop.svg' alt='illustration'/>
-              </div>   
+              <div className='initialimage'>    
+                  <img className="image" alt='illustration'/>
+              </div>  
             </div>
             <Popup
               open={isPopupOpen} 
